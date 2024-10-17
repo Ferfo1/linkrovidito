@@ -6,3 +6,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Az összes lekérést a shortener.php fájlhoz irányítja
 RewriteRule ^([^/]+)$ shortener.php?code=$1 [L]
+ 
