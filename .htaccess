@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Ha a megadott útvonal nem egy fájl vagy mappa
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Az összes lekérést a shortener.php fájlhoz irányítja
+RewriteRule ^([^/]+)$ shortener.php?code=$1 [L]
